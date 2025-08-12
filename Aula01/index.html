@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+    <style>
+        .negativo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div>
+            <h1>Aula01</h1>
+        </div>
+        <div>
+            <p id="pConteudo"></p>
+            <a>Acessar</a>
+        </div>
+    </div>
+
+    <hr>
+    <input type="number" id="txtNumero" placeholder="Digite um número"> <br>
+    <button onclick="dobrar()">Dobrar</button>
+    <p id="pResultado"></p>
+
+    <hr>
+    <h2>Calculadora</h2>
+    <input type="number" id="num1" placeholder="Primeiro número">
+    <input type="number" id="num2" placeholder="Segundo número"> <br>
+    <button onclick="calcular()">Calcular Soma</button>
+    <p id="resultadoSoma"></p>
+
+    <script>
+        function dobrar(){
+            numero = document.getElementById("txtNumero").value
+            if(numero.length > 0){
+                result = numero * 2
+                document.getElementById("pResultado").innerHTML = result
+            }else{
+                alert("Nenhum valor preenchido")
+            }
+        }
+
+        function calcular() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const resultadoElement = document.getElementById("resultadoSoma");
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Por favor, digite números válidos em ambos os campos");
+                return;
+            }
+            
+            const soma = num1 + num2;
+            resultadoElement.textContent = "Resultado: " + soma;
+            
+            if (soma < 0) {
+                resultadoElement.classList.add("negativo");
+            } else {
+                resultadoElement.classList.remove("negativo");
+            }
+        }
+
+        document.getElementById("pConteudo").innerHTML = "Olá <i>Pessoal</i>";
+        document.getElementsByTagName("a")[0].setAttribute("href", "https://www.senacrs.com.br");
+    </script>
+</body>
+</html>
