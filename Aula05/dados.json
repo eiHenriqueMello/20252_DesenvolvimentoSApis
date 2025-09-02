@@ -1,0 +1,13 @@
+{
+    "nome" : "Jóca", 
+    "idade" : " 22" ,
+    "altura" : 1.70 ,
+    "casado" : true ,
+    "conjuge" : {"nome": "Maria", "idade" : "30"},
+    "filhos" : [
+        {"nome": "Laura", "idade" : "5"},
+        {"nome": "Pedro", "idade" : "2"}
+    ] ,
+    "formacoes" : ["Graduação" , "Mestrado"] ,
+    "endereco" : null
+}

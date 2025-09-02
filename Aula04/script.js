@@ -35,7 +35,3 @@ function gerarNumeros(){
     req.open("GET" , "servidor.php?valor=" + numero , true)
     req.send()
 }
-
-// Exercício: Montar uma função que o usuário informará o número.
-// Este número será enviado para o servidor, que retornará apenas 
-// os números pares de 0 até o número informado
