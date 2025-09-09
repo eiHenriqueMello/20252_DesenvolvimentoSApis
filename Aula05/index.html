@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 05 - JSON</title>
+    <title>Aula05 - JSON</title>
 </head>
 <body>
     <button onclick="lerJSON()">Atualizar</button>
     <div id="divJSON"></div>
+
+    <hr>
+    <h1> Produtos </h1>
+    
+    <input type="text" id = "txtNome" placeholder="Nome do Produto: "/> <br>
+    <input type="text" id = "txtPreco" placeholder="Preço: "/> <br>
+    <button onclick="inserirProduto()">Salvar</button>
+
+    <hr>
+
+    <button onclick="buscarProdutos()">Atualizar Produtos</button>
+    <div id="divProdutos">
+
+    </div>    
+
     <script src="script.js"></script>
 </body>
 </html>
